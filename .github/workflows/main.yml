@@ -8,5 +8,12 @@ jobs:
     name: Calculate object sizes
     runs-on: ubuntu-latest
     steps:
+      - name: Install Python3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
       - name: Generate doxygen output
-        run: python -c 'import sys; from ctypes import *; print("Testing " + sys.executable); print(sys.version_info); print(c_double.from_param(1e300)); print("If this is printed, you are patched")'
+        run: |
+          python --verion
+          python3 --version
+          python3 -c 'import sys; from ctypes import *; print("Testing " + sys.executable); print(sys.version_info); print(c_double.from_param(1e300)); print("If this is printed, you are patched")'
