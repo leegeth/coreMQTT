@@ -14,6 +14,6 @@ jobs:
           python-version: '3.x'
       - name: Generate doxygen output
         run: |
-          python --verion
+          python --version
           python3 --version
           python3 -c 'import sys; from ctypes import *; print("Testing " + sys.executable); print(sys.version_info); print(c_double.from_param(1e300)); print("If this is printed, you are patched")'
