@@ -1,0 +1,12 @@
+name: Python Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  memory_statistics:
+    name: Calculate object sizes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate doxygen output
+        run: python -c 'import sys; from ctypes import *; print("Testing " + sys.executable); print(sys.version_info); print(c_double.from_param(1e300)); print("If this is printed, you are patched")'
