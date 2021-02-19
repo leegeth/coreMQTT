@@ -11,6 +11,5 @@ jobs:
       - name: uninstall Python
         run: |
           sudo apt purge python2.7-minimal
-          sudo apt purge python3.8-minimal
           python --version
           python3 --version
