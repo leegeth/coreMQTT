@@ -8,6 +8,10 @@ jobs:
     name: Calculate object sizes
     runs-on: ubuntu-latest
     steps:
+      - name: Install Python3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.10'
       - name: uninstall Python
         run: |
           sudo apt purge python2.7-minimal
