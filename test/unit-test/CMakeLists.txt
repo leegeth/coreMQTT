@@ -14,6 +14,7 @@ list(APPEND mock_list
 # list the directories your mocks need
 list(APPEND mock_include_list
             .
+            ${CMAKE_CURRENT_LIST_DIR}/logging
             ${MQTT_INCLUDE_PUBLIC_DIRS}
         )
 #list the definitions of your mocks to control what to be included
@@ -31,8 +32,8 @@ list(APPEND real_source_files
 # list the directories the module under test includes
 list(APPEND real_include_directories
             .
+            ${CMAKE_CURRENT_LIST_DIR}/logging
             ${MQTT_INCLUDE_PUBLIC_DIRS}
-            ${MQTT_INCLUDE_PRIVATE_DIRS}
         )
 
 # =====================  Create UnitTest Code here (edit)  =====================
@@ -41,7 +42,6 @@ list(APPEND real_include_directories
 list(APPEND test_include_directories
             .
             ${MQTT_INCLUDE_PUBLIC_DIRS}
-            ${MQTT_INCLUDE_PRIVATE_DIRS}
         )
 
 # =============================  (end edit)  ===================================
